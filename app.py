@@ -6,8 +6,8 @@ import pickle
 app = Flask(__name__)
 
 # Load the model and tokenizer
-model = tf.keras.models.load_model(r'C:\Users\Prave\Downloads\ML_Final Project\sentiment_model.h5')
-with open(r'C:\Users\Prave\Downloads\ML_Final Project\tokenizer.pickle', 'rb') as handle:
+model = tf.keras.models.load_model('sentiment_model.h5')
+with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 @app.route('/')
